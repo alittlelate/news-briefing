@@ -51,8 +51,6 @@ func FetchAll(cfg *Config) []Article {
 		articles []Article
 	)
 
-	parser := gofeed.NewParser()
-
 	for _, feed := range cfg.Feeds {
 		wg.Add(1)
 		go func(f FeedConfig) {
@@ -61,6 +59,7 @@ func FetchAll(cfg *Config) []Article {
 			ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 			defer cancel()
 
+			parser := gofeed.NewParser()
 			parsed, err := parser.ParseURLWithContext(f.URL, ctx)
 			if err != nil {
 				log.Printf("failed to fetch %s: %v", f.Name, err)

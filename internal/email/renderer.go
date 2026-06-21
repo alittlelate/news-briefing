@@ -106,6 +106,7 @@ func RenderHTML(r *Report) (string, error) {
 		"repeat": func(s string, n int) string {
 			return strings.Repeat(s, n)
 		},
+		"subtract": func(a, b int) int { return b - a },
 		"formatDate": func(d string) string {
 			t, err := time.Parse("2006-01-02", d)
 			if err != nil {

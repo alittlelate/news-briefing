@@ -51,7 +51,7 @@ func GenerateReport(systemPrompt string, articles []rss.Article) (string, error)
 			{Text: systemPrompt},
 		},
 		Model:     anthropic.ModelClaudeHaiku4_5,
-		MaxTokens: 20000,
+		MaxTokens: 8192,
 		Messages: []anthropic.MessageParam{
 			anthropic.NewUserMessage(anthropic.NewTextBlock(userMessage)),
 		},
@@ -61,5 +61,8 @@ func GenerateReport(systemPrompt string, articles []rss.Article) (string, error)
 		return "", err
 	}
 
-	return response.JSON.Content.Raw(), nil
+	if len(response.Content) == 0 {
+		return "", fmt.Errorf("empty response from Claude")
+	}
+	return response.Content[0].Text, nil
 }
