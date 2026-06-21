@@ -64,5 +64,8 @@ func GenerateReport(systemPrompt string, articles []rss.Article) (string, error)
 	if len(response.Content) == 0 {
 		return "", fmt.Errorf("empty response from Claude")
 	}
+	if response.Content[0].Type != "text" {
+		return "", fmt.Errorf("unexpected content block type: %s", response.Content[0].Type)
+	}
 	return response.Content[0].Text, nil
 }
