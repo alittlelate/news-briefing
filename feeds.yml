@@ -35,6 +35,10 @@ feeds:
     name: "Limes"
     category: "Italia"
 
+  - url: "https://lindipendente.online"
+    name: "L'Indipendente"
+    category: "Italia"
+
   # ─────────────────────────────────────────
   # EUROPA E GEOPOLITICA
   # ─────────────────────────────────────────
