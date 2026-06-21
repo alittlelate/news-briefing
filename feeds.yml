@@ -1,0 +1,116 @@
+feeds:
+  # ─────────────────────────────────────────
+  # ITALIA
+  # ─────────────────────────────────────────
+  - url: "http://ilmanifesto.it/feed/"
+    name: "Il Manifesto"
+    category: "Italia"
+
+  - url: "http://feeds.ilpost.it/ilpost"
+    name: "Il Post"
+    category: "Italia"
+
+  - url: "https://www.ilsole24ore.com/rss/italia.xml"
+    name: "Il Sole 24 Ore"
+    category: "Italia"
+
+  - url: "http://www.internazionale.it/subscribe/backstage/"
+    name: "Internazionale"
+    category: "Italia"
+    # note: may return partial content (paywall)
+
+  - url: "https://irpimedia.irpi.eu/feed/"
+    name: "IrpiMedia"
+    category: "Italia"
+
+  - url: "http://www.ilfattoquotidiano.it/feed/"
+    name: "Il Fatto Quotidiano"
+    category: "Italia"
+
+  - url: "https://jacobinitalia.it/feed/"
+    name: "Jacobin Italia"
+    category: "Italia"
+
+  - url: "https://www.limesonline.com/rss"
+    name: "Limes"
+    category: "Italia"
+
+  # ─────────────────────────────────────────
+  # EUROPA E GEOPOLITICA
+  # ─────────────────────────────────────────
+  - url: "http://mondediplo.com/backend"
+    name: "Le Monde Diplomatique"
+    category: "Europa"
+
+  - url: "https://braveneweurope.com/feed"
+    name: "Brave New Europe"
+    category: "Europa"
+
+  - url: "https://responsiblestatecraft.org/feed/"
+    name: "Responsible Statecraft"
+    category: "Europa"
+
+  # ─────────────────────────────────────────
+  # USA — GIORNALISMO INDIPENDENTE
+  # ─────────────────────────────────────────
+  - url: "https://www.dropsitenews.com/feed"
+    name: "Drop Site News"
+    category: "USA"
+
+  - url: "http://www.democracynow.org/democracynow.rss"
+    name: "Democracy Now"
+    category: "USA"
+
+  - url: "https://firstlook.org/theintercept/feed/"
+    name: "The Intercept"
+    category: "USA"
+
+  - url: "http://jacobinmag.com/feed/"
+    name: "Jacobin"
+    category: "USA"
+
+  - url: "https://currentaffairs.org/feed/"
+    name: "Current Affairs"
+    category: "USA"
+
+  - url: "http://fair.org/feed/"
+    name: "FAIR"
+    category: "USA"
+
+  - url: "http://feeds.propublica.org/propublica/main"
+    name: "ProPublica"
+    category: "USA"
+
+  - url: "https://feedx.pw/rss/ap.xml"
+    name: "Associated Press"
+    category: "USA"
+
+  - url: "https://www.axios.com/feeds/feed.rss"
+    name: "Axios"
+    category: "USA"
+
+  - url: "http://feeds.politico.com/politico/rss/politicopicks"
+    name: "Politico"
+    category: "USA"
+
+  - url: "https://www.zeteonews.com/feed"
+    name: "Zeteo"
+    category: "USA"
+
+  # ─────────────────────────────────────────
+  # MEDIO ORIENTE
+  # ─────────────────────────────────────────
+  - url: "http://english.aljazeera.net/Services/Rss/?PostingId=2007731105943979989"
+    name: "Al Jazeera"
+    category: "Middle East"
+
+  # ─────────────────────────────────────────
+  # NEWSLETTER E SUBSTACK
+  # ─────────────────────────────────────────
+  - url: "https://adamtooze.substack.com/feed/"
+    name: "Chartbook (Adam Tooze)"
+    category: "Newsletter"
+
+  - url: "https://branko2f7.substack.com/feed/"
+    name: "Global Inequality (Branko Milanovic)"
+    category: "Newsletter"
