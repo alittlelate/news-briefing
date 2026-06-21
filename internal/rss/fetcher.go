@@ -72,12 +72,10 @@ func FetchAll(cfg *Config) []Article {
 			defer mu.Unlock()
 
 			for _, item := range parsed.Items {
-				var published time.Time
-				if item.PublishedParsed != nil {
-					published = *item.PublishedParsed
-				} else {
-					published = time.Now()
+				if item.PublishedParsed == nil {
+					continue
 				}
+				published := *item.PublishedParsed
 
 				if published.Before(cutoff) {
 					continue
