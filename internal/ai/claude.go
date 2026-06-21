@@ -57,7 +57,7 @@ func GenerateReport(systemPrompt string, articles []rss.Article) (string, error)
 		},
 	})
 	if err != nil {
-		log.Printf("Failed to recieve valid answer from claude's api: %v", err)
+		log.Printf("failed to receive response from Claude API: %v", err)
 		return "", err
 	}
 

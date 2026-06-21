@@ -19,7 +19,7 @@ func main() {
 
 	systemPrompt, err := ai.LoadPrompt("prompt.txt")
 	if err != nil {
-		log.Fatalf("failed to load feeds: %v", err)
+		log.Fatalf("failed to load prompt: %v", err)
 	}
 
 	log.Println("fetching RSS feeds...")
@@ -36,7 +36,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("failed to write report %v", err)
 	} else {
-		log.Printf("report written to %s: ", path)
+		log.Printf("report written to %s", path)
 	}
 
 	log.Println("parsing report...")
