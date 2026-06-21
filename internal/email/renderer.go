@@ -106,7 +106,18 @@ func RenderHTML(r *Report) (string, error) {
 		"repeat": func(s string, n int) string {
 			return strings.Repeat(s, n)
 		},
-		"subtract": func(a, b int) int { return b - a },
+		"subtract": func(a, b int) int {
+			if b-a < 0 {
+				return 0
+			}
+			return b - a
+		},
+		"minInt": func(a, b int) int {
+			if a < b {
+				return a
+			}
+			return b
+		},
 		"formatDate": func(d string) string {
 			t, err := time.Parse("2006-01-02", d)
 			if err != nil {
@@ -208,7 +219,7 @@ const htmlTemplate = `<!DOCTYPE html>
       <!-- readiness badge -->
       <div style="margin-bottom:12px;">
         <span style="display:inline-block;background:{{readinessColor .Readiness}};color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:3px;">
-          {{repeat "●" .Readiness}}{{repeat "○" (5 | subtract .Readiness)}} {{readinessLabel .Readiness}}
+          {{repeat "●" (minInt 5 .Readiness)}}{{repeat "○" (5 | subtract (minInt 5 .Readiness))}} {{readinessLabel .Readiness}}
         </span>
       </div>
 
