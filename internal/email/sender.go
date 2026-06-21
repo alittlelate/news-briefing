@@ -2,6 +2,7 @@ package email
 
 import (
 	"fmt"
+	"mime"
 	"net/smtp"
 	"os"
 	"strings"
@@ -23,7 +24,7 @@ func Send(subject, htmlBody string) error {
 	msg := strings.Join([]string{
 		"From: " + from,
 		"To: " + to,
-		"Subject: " + subject,
+		"Subject: " + mime.QEncoding.Encode("UTF-8", subject),
 		"MIME-Version: 1.0",
 		"Content-Type: text/html; charset=UTF-8",
 		"",
